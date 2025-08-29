@@ -1,0 +1,298 @@
+html, body
+{
+	margin: 0;
+	padding: 0 0 1em 0;
+	background-color: #FBE9DA;
+	
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #214E34;
+	font-size: 110%;
+}
+
+div.content
+{
+	max-width: 100%;
+	max-width: min(750px, 96vw);
+	margin: 0 auto;
+}
+
+div.content h1
+{
+	font-family: Georgia, serif;
+	color: #E56399;
+	font-weight: normal;
+	font-variant: small-caps;
+	text-decoration: underline 0.05em;
+	margin: 2.5em 0px -7px 0px;
+}
+
+span.lastname
+{
+	font-weight: bold;
+}
+
+div.content h2
+{
+	max-width: 100%;
+	max-width: min(500px, 100vw);
+	margin: 2ex auto 0 auto;
+	font-weight: normal;
+	font-variant: small-caps;
+}
+
+div#contact
+{
+	float: right;
+	font-size: 70%;
+	background-color: rgba(229,99,153,0.2);
+	border: 3px solid rgb(229,99,153);
+	border-radius: 10px;
+	padding: 16px 8px;
+	margin: -5em 0 0.75em 3em;
+	max-width: min(250px, 100vw);
+}
+
+div#contact img#profile-pic
+{
+	clip-path: circle(45%);
+	display: block;
+	margin: 0 auto;
+}
+
+div#contact ul
+{
+	list-style-type: none;
+	display: block;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 1em 0 0.5em 0;
+}
+
+div#contact ul li
+{
+	margin: 2px 0;
+	padding: 0;
+	max-width: 100%;
+}
+
+div#contact ul li:nth-child(3)
+{
+	text-align-last: right;
+	/*padding-right: 2em;*/
+}
+
+span.contactsymbol
+{
+	display: inline-block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 7px 0 0;
+	padding: 0;
+	text-align: right;
+	font-weight: bold;
+	font-size: 110%;
+}
+
+span.contactsymbol img
+{
+	width: 90%;
+	margin-bottom: -5px;
+}
+
+div.content p
+{
+	max-width: 100%;
+	max-width: min(500px, 100vw);
+	margin: 1.2ex auto 0 auto;
+	text-align: justify;
+}
+
+a
+{
+	color: #214E34;
+	text-decoration: underline 0.15em rgba(33, 78, 52, 0.5);/*#214E34*/
+	transition: text-decoration-color 300ms;
+}
+
+a:hover
+{
+	text-decoration: underline 0.15em rgba(33, 78, 52, 1);
+}
+
+div.content ol.publications
+{
+	display: flex;
+	flex-direction: column-reverse;
+	max-width: 100%;
+	max-width: min(500px, 100vw);
+	margin: 0 auto;
+	padding-left: 0px;
+}
+
+div.content ol.publications li
+{
+	list-style-position: outside;
+	margin-top: 0.5em;
+}
+
+div.content ol.publications li span.pubtitle
+{
+	font-weight: bold;
+	display: block;
+}
+
+div.content ol.publications li span.pubcoauthor::before
+{
+	/*content: ' (';*/
+}
+
+div.content ol.publications li span.pubcoauthor::after
+{
+	/*content: ')';*/
+}
+
+div.content ol.publications li a.pubarxiv
+{
+	margin: 0px 0px 0px 0.3em;
+}
+
+div.content ol.publications li a.pubarxiv::before
+{
+	content: '[';
+}
+
+div.content ol.publications li a.pubarxiv::after
+{
+	content: ']';
+}
+
+div.content ol.publications li a.pubjournal
+{
+	margin: 0px 0px 0px 0.3em;
+}
+
+div.content ol.publications li a.pubjournal::before
+{
+	content: '[';
+}
+
+div.content ol.publications li a.pubjournal::after
+{
+	content: ']';
+}
+
+div.content ol.publications li a.collapsetoggle
+{
+	margin: 0px 0px 0px 0.3em;
+	text-decoration: none;
+	display: none;
+}
+
+div.content ol.publications li div.collapsecontent
+{
+	overflow: hidden;
+	max-height: 800px; /* Just a large number so things work when JS is disabled. */
+	transition: max-height 200ms;
+	font-size: 80%;
+}
+
+div.content ol.publications li div.collapsecontent span.pubjournalref
+{
+	display: block;
+	margin-bottom: 0.5em;
+	font-style: italic;
+}
+
+div.content ul#coauthors
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-width: min(500px, 85vw);
+	margin: 0 auto;
+	padding-left: 0px;
+}
+
+div.content ul#coauthors li
+{
+	display: inline;
+	border: 2px solid #E56399;
+	background-color: #E56399;
+	color: #FBE9DA;
+	border-radius: 5px;
+	padding: 0px 5px;
+	margin: 5px 5px 5px 0px;
+}
+
+div.content ul#coauthors li a
+{
+	color: #FBE9DA;
+	text-decoration: underline 0.15em rgba(251,233,218,0.5);
+	transition: text-decoration-color 300ms;
+}
+
+div.content ul#coauthors li a:hover
+{
+	text-decoration-color: rgba(251,233,218,1);
+}
+
+ul.menu
+{
+	max-width: 100%;
+	max-width: min(500px, 90vw);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul.menu li
+{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	padding: auto;
+}
+
+ul.menu li a
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: red;
+	min-width: 120px;
+	min-height: 120px;
+	line-height: 120px;
+	text-align: center;
+	padding: auto;
+	
+	font-weight: bold;
+	color: white;
+	text-decoration: underline 0.15em white;
+	/*border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;*/
+	/*clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 70% 100%, 30% 100%, 0% 70%);*/
+	clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 90%, 0% 70%);
+	transition: clip-path 500ms;
+}
+
+ul.menu li a:hover
+{
+	clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+}
+
+/*ul.menu li a img
+{
+	display: block;
+	margin: auto;
+	border: 1px solid red;
+}*/
+
+/*ul.menu li a.menu-internal::after
+{
+	content: '\023F7';
+	display: block;
+}*/
