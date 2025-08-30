@@ -1,4 +1,4 @@
-html, body
+html
 {
 	margin: 0;
 	padding: 0 0 1em 0;
@@ -6,7 +6,13 @@ html, body
 	
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	color: #214E34;
-	font-size: 110%;
+	font-size: 19px;
+}
+
+body
+{
+	margin: 0;
+	padding: 0 0 1em 0;
 }
 
 div.content
@@ -42,14 +48,22 @@ div.content h2
 
 div#contact
 {
-	float: right;
-	font-size: 70%;
+	font-size: 0.7rem;
 	background-color: rgba(229,99,153,0.2);
 	border: 3px solid rgb(229,99,153);
 	border-radius: 10px;
 	padding: 16px 8px;
-	margin: -5em 0 0.75em 3em;
+	margin: 1em 0;
 	max-width: min(250px, 100vw);
+}
+
+@media (min-width: 500px)
+{
+	div#contact
+	{
+		float: right;
+		margin: -5em 0 0.75em 3em;
+	}
 }
 
 div#contact img#profile-pic
@@ -77,7 +91,7 @@ div#contact ul li
 
 div#contact ul li:nth-child(3)
 {
-	text-align-last: right;
+	/*text-align-last: right;*/
 	/*padding-right: 2em;*/
 }
 
@@ -90,7 +104,8 @@ span.contactsymbol
 	padding: 0;
 	text-align: right;
 	font-weight: bold;
-	font-size: 110%;
+	/*font-size: 110%;*/
+	font-size: 0.77rem;
 }
 
 span.contactsymbol img
@@ -127,12 +142,14 @@ div.content ol.publications
 	max-width: min(500px, 100vw);
 	margin: 0 auto;
 	padding-left: 0px;
+	font-size: 1rem;
 }
 
 div.content ol.publications li
 {
 	list-style-position: outside;
 	margin-top: 0.5em;
+	margin-left: 1.5em;
 }
 
 div.content ol.publications li span.pubtitle
@@ -140,6 +157,11 @@ div.content ol.publications li span.pubtitle
 	font-weight: bold;
 	display: block;
 }
+
+/*div.content ol.publications li span.pubtitle::after
+{
+	content: '&nbsp;';
+}*/
 
 div.content ol.publications li span.pubcoauthor::before
 {
@@ -151,9 +173,14 @@ div.content ol.publications li span.pubcoauthor::after
 	/*content: ')';*/
 }
 
+div.content ol.publications li span.pubcoauthor
+{
+	margin-right: 0.3em;
+}
+
 div.content ol.publications li a.pubarxiv
 {
-	margin: 0px 0px 0px 0.3em;
+	margin: 0px;
 }
 
 div.content ol.publications li a.pubarxiv::before
@@ -193,7 +220,7 @@ div.content ol.publications li div.collapsecontent
 	overflow: hidden;
 	max-height: 800px; /* Just a large number so things work when JS is disabled. */
 	transition: max-height 200ms;
-	font-size: 80%;
+	font-size: 0.8rem;
 }
 
 div.content ol.publications li div.collapsecontent span.pubjournalref
@@ -208,7 +235,7 @@ div.content ul#coauthors
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	max-width: min(500px, 85vw);
+	width: min(500px, 85vw);
 	margin: 0 auto;
 	padding-left: 0px;
 }
@@ -239,7 +266,7 @@ div.content ul#coauthors li a:hover
 ul.menu
 {
 	max-width: 100%;
-	max-width: min(500px, 90vw);
+	max-width: min(500px, 100vw);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
@@ -272,9 +299,6 @@ ul.menu li a
 	font-weight: bold;
 	color: white;
 	text-decoration: underline 0.15em white;
-	/*border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;*/
-	/*clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 70% 100%, 30% 100%, 0% 70%);*/
 	clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 90%, 0% 70%);
 	transition: clip-path 500ms;
 }
